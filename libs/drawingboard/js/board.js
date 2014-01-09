@@ -73,8 +73,8 @@ DrawingBoard.Board = function(id, opts) {
 DrawingBoard.Board.defaultOpts = {
 	controls: ['Color', 'DrawingMode', 'Size', 'Navigation'],
 	controlsPosition: "top left",
-	color: "#000000",
-	size: 1,
+	color: "#ffff00",
+	size: 10,
 	background: "#fff",
 	eraserColor: "background",
 	webStorage: 'session',
@@ -579,7 +579,7 @@ DrawingBoard.Board.prototype = {
 		this.coords.current = coords;
 		this.ev.trigger('board:drawing', {e: e, coords: coords});
 
-		if (!window.requestAnimationFrame) this.draw();
+        if (!window.requestAnimationFrame) this.draw();
 
 		e.preventDefault();
 	},

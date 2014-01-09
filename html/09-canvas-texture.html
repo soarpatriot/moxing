@@ -6,7 +6,6 @@
     <title>Example 10.09 - Canvas texture</title>
     <link href="../libs/drawingboard/css/drawingboard.css" rel="stylesheet">
     <script type="text/javascript" src="../libs/three.js"></script>
-    <!--<script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>-->
     <script src="../libs/drawingboard/components/jquery/jquery.min.js"></script>
     <script src="../libs/drawingboard/js/drawingboard.js"></script>
     <script src="../libs/drawingboard/js/board.js"></script>
@@ -20,9 +19,6 @@
     <script type="text/javascript" src="../libs/stats.js"></script>
     <script type="text/javascript" src="../libs/dat.gui.js"></script>
     <script type="text/javascript" src="../libs/perlin.js"></script>
-    <!--<script type="text/javascript" src="../libs/literally/jquery-1.8.2.js"></script>-->
-    <!--<script type="text/javascript" src="../libs/literally/underscore-1.4.2.js"></script>-->
-    <!--<script type="text/javascript" src="../libs/literally/js/literallycanvas.js"></script>-->
 
     <style>
         body {
@@ -77,7 +73,7 @@
 <!-- Javascript code that runs our Three.js examples -->
 <script type="text/javascript">
 
-    //    var defaultBoard = new DrawingBoard.Board('default-board');
+    // var defaultBoard = new DrawingBoard.Board('default-board');
     var defaultBoard = new DrawingBoard.Board('default-board', {
         controls: [
             'Color',
@@ -115,26 +111,26 @@
         webGLRenderer.shadowMapEnabled = true;
 
         var cube;
-//        var cube = createMesh(new THREE.CubeGeometry(10, 10, 10), "floor-wood.jpg");
-//        cube.position.x = 0;
-//        scene.add(cube);
+// var cube = createMesh(new THREE.CubeGeometry(10, 10, 10), "floor-wood.jpg");
+// cube.position.x = 0;
+// scene.add(cube);
         var loader = new THREE.JSONLoader();
         loader.load('titled.js', function (geometry) {
-//            if (mesh) scene.remove(mesh);
+// if (mesh) scene.remove(mesh);
             var material = new THREE.MeshLambertMaterial({color: 0xffffff});
             var texture = THREE.ImageUtils.loadTexture("BoxTexture.png");
             material.map = texture;
 
-//                    geometry.children[0].children[0].material = material;
-//                    geometry.children[0].children[1].material = material;
+// geometry.children[0].children[0].material = material;
+// geometry.children[0].children[1].material = material;
 
 
-//                    mesh = geometry;
+// mesh = geometry;
             cube = createMesh(geometry, "floor-wood.jpg");
-//            cube = new THREE.Mesh(geometry, material);
+// cube = new THREE.Mesh(geometry, material);
             cube.scale.set(5, 5, 5);
-//                    geometry.scale.set(15, 15, 15);
-//                    geometry.rotation.x = -0.3;
+// geometry.scale.set(15, 15, 15);
+// geometry.rotation.x = -0.3;
 
 
             scene.add(cube);
@@ -161,7 +157,7 @@
         // call the render function
         var step = 0;
 
-//        var polyhedron = createMesh(new THREE.PolyhedronGeometry(vertices, faces, controls.radius, controls.detail));
+// var polyhedron = createMesh(new THREE.PolyhedronGeometry(vertices, faces, controls.radius, controls.detail));
 
         // setup the control gui
         var controls = new function () {
@@ -195,7 +191,7 @@
         gui.add(controls, "showTexture").onChange(controls.showCanvas);
 
 
-//        render();
+// render();
 
         function createMesh(geom) {
 
@@ -238,16 +234,16 @@
 
 </script>
 
-<!--var canvas2  = new fabric.Canvas('c2', { backgroundColor: "#000", renderOnAddition: false }),-->
+<!--var canvas2 = new fabric.Canvas('c2', { backgroundColor: "#000", renderOnAddition: false }),-->
 <!--results2 = document.getElementById('results-c2');-->
 
 <!--startTimer();-->
 <!--for (i = 1000; i >= 0; i--) {-->
 <!--dot = new fabric.Circle({-->
-<!--left:   getRandomInt(0, 400),-->
-<!--top:    getRandomInt(0, 350),-->
+<!--left: getRandomInt(0, 400),-->
+<!--top: getRandomInt(0, 350),-->
 <!--radius: 3,-->
-<!--fill:   rainbow[getRandomInt(0, rainbowEnd)]-->
+<!--fill: rainbow[getRandomInt(0, rainbowEnd)]-->
 <!--});-->
 <!--canvas2.add(dot);-->
 <!--}-->
