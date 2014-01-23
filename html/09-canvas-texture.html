@@ -88,7 +88,7 @@
     var context = canvas.getContext('2d');
 
     var image = new Image();
-    image.src = 'BoxTexture.png';
+    image.src = 'picture/bee.jpg';
     image.onload = function(e) {
         context.drawImage(image, 0, 0, canvas.width, canvas.height);
     }
@@ -115,10 +115,10 @@
 // cube.position.x = 0;
 // scene.add(cube);
         var loader = new THREE.JSONLoader();
-        loader.load('titled.js', function (geometry) {
+        loader.load('Jobs.js', function (geometry) {
 // if (mesh) scene.remove(mesh);
             var material = new THREE.MeshLambertMaterial({color: 0xffffff});
-            var texture = THREE.ImageUtils.loadTexture("BoxTexture.png");
+            var texture = THREE.ImageUtils.loadTexture("steve-jobs.jpg");
             material.map = texture;
 
 // geometry.children[0].children[0].material = material;

@@ -1054,7 +1054,7 @@
 
         ImageShape.prototype.draw = function(ctx) {
 //            return ctx.drawImage(this.image, this.x, this.y);
-            return ctx.drawImage(this.image, 0, 0, this.imageWidth, this.imageHeight, this.imageX, this.imageY, this.imageWidth, this.imageHeight);
+            return ctx.drawImage(this.image, 0, 0, this.image.width, this.image.height, this.imageX, this.imageY, this.imageWidth, this.imageHeight);
         };
 
         ImageShape.prototype.anchorHitTest = function(x, y) {
